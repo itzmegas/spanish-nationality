@@ -1,7 +1,8 @@
 import type { FunctionComponent } from "preact";
 import type { ButtonHTMLAttributes } from "preact/compat";
 import { twMerge, type ClassNameValue } from "tailwind-merge";
-import type { Colors } from "@/types";
+import type { Colors } from "@/types/colors";
+import { createColorClasses } from "@/lib/tailwind-colors";
 
 export interface ButtonProps
   extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, "className"> {
@@ -12,14 +13,16 @@ export interface ButtonProps
 export const Button: FunctionComponent<ButtonProps> = ({
   children,
   className,
-  color = "purple",
+  color = "blue",
   ...restProps
 }) => {
+  // Use createColorClasses with default configurations
+  const colorClasses = createColorClasses(color);
   return (
     <button
       className={twMerge(
-        `border-2 border-black rounded-xl p-2 w-full cursor-pointer`,
-        `bg-${color}-500 hover:bg-${color}-600 active:bg-${color}-700`,
+        "border-2 border-black rounded-xl p-2 w-full cursor-pointer text-white font-bold",
+        colorClasses,
         className,
       )}
       {...restProps}

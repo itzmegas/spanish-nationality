@@ -20,4 +20,5 @@ export type Colors =
   | "gray"
   | "zinc"
   | "neutral"
-  | "stone";
+  | "stone"
+  | "transparent";
