@@ -1,0 +1,12 @@
+---
+import { Question } from "@/components/Question";
+import questions from "../data/ccse_questions.json";
+import type { Question as TypeQuestion } from "../types";
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout>
+  <div>
+    <Question client:only questionnaire={questions as TypeQuestion[]} />
+  </div>
+</Layout>

@@ -39,9 +39,9 @@ export const createColorClasses = (
   // If no configurations are provided, use default configurations
   if (classConfigs.length === 0) {
     classConfigs = [
-      { property: 'bg', variant: 500 },
-      { property: 'bg', variant: 600, state: 'hover' },
-      { property: 'bg', variant: 700, state: 'active' }
+      { property: "bg", variant: 500 },
+      { property: "bg", variant: 600, state: "hover" },
+      { property: "bg", variant: 700, state: "active" },
     ];
   }
 
@@ -49,10 +49,10 @@ export const createColorClasses = (
     .map((config) => {
       // Make sure property is defined
       const validConfig = {
-        property: config.property || 'bg',
+        property: config.property || "bg",
         variant: config.variant,
         state: config.state,
-        color
+        color,
       };
       return getColorClass(validConfig);
     })

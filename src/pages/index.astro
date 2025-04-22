@@ -1,5 +1,4 @@
 ---
-import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -7,5 +6,25 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <Welcome />
+  <div id="container">
+    <main>
+      <section>
+        <a href="/questions" class="font-bold text-2xl">
+          <div
+            class="w-100 h-40 flex justify-center items-center rounded-lg overflow-hidden bg-white shadow-sm cursor-pointer active:shadow-lg"
+          >
+            Comenzar
+          </div>
+        </a>
+      </section>
+    </main>
+  </div>
 </Layout>
+
+<style>
+  #container {
+    font-family:
+      Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial,
+      sans-serif;
+  }
+</style>

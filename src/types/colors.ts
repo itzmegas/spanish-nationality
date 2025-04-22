@@ -1,4 +1,9 @@
 export type Colors =
+  | "primary"
+  | "secondary"
+  | "accent"
+  | "text"
+  | "background"
   | "red"
   | "orange"
   | "amber"
