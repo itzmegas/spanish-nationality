@@ -9,6 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/db": "^0.14.11",
     "@astrojs/preact": "^4.0.9",
     "astro": "^5.7.4",
     "pnpm": "^10.9.0",
