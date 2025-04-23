@@ -1,6 +1,10 @@
-import { defineDb } from 'astro:db';
+import { defineDb } from "astro:db";
+import { Exam, User } from "./tables";
 
 // https://astro.build/db/config
 export default defineDb({
-  tables: {}
+  tables: {
+    User,
+    Exam,
+  },
 });

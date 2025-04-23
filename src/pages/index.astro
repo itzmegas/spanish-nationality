@@ -1,25 +1,32 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import PageLayout from "@/layouts/PageLayout.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
+<PageLayout>
   <div id="container">
-    <main>
-      <section>
-        <a href="/questions" class="font-bold text-2xl">
+    <section>
+      <div class="grid grid-cols-2 gap-4">
+        <a href="/exam" class="font-bold text-2xl">
           <div
-            class="w-100 h-40 flex justify-center items-center rounded-lg overflow-hidden bg-white shadow-sm cursor-pointer active:shadow-lg"
+            class="p-20 rounded-lg overflow-hidden bg-white shadow-sm cursor-pointer active:shadow-lg"
           >
-            Comenzar
+            Examen
           </div>
         </a>
-      </section>
-    </main>
+        <a href="/questions" class="font-bold text-2xl">
+          <div
+            class="p-20 rounded-lg overflow-hidden bg-white shadow-sm cursor-pointer active:shadow-lg"
+          >
+            Preguntas
+          </div>
+        </a>
+      </div>
+    </section>
   </div>
-</Layout>
+</PageLayout>
 
 <style>
   #container {
