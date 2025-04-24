@@ -1,5 +1,10 @@
 ---
 import PageLayout from "@/layouts/PageLayout.astro";
+import questions from "@/data/ccse_questions.json";
+import type { Question as TypeQuestion } from "../types";
+import { Exam as ExamComponent } from "@/components";
 ---
 
-<PageLayout />
+<PageLayout>
+  <ExamComponent client:only questionnaire={questions as TypeQuestion[]} />
+</PageLayout>

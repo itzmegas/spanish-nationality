@@ -1,12 +1,33 @@
 ---
-import { Question } from "@/components/Question";
 import questions from "@/data/ccse_questions.json";
-import type { Question as TypeQuestion } from "../types";
-import Layout from "@/layouts/Layout.astro";
+import PageLayout from "@/layouts/PageLayout.astro";
 ---
 
-<Layout>
-  <div>
-    <Question client:only questionnaire={questions as TypeQuestion[]} />
+<PageLayout>
+  <div class="flex flex-col gap-2 py-10">
+    {
+      questions.map((question) => (
+        <div class="flex flex-col gap-2 p-5 rounded-xl bg-white">
+          <h5 class="text-md font-bold">{question.question}</h5>
+          {Object.entries(question.options).map(([option, text]) => {
+            const isCorrect = option === question.correct_answer;
+            return (
+              <div class="flex items-center gap-3">
+                <span class={`font-bold ${isCorrect && "text-green-500"}`}>
+                  {option.toUpperCase()}.
+                </span>
+                <span
+                  {...(isCorrect && {
+                    class: "text-green-500 font-bold",
+                  })}
+                >
+                  {text}
+                </span>
+              </div>
+            );
+          })}
+        </div>
+      ))
+    }
   </div>
-</Layout>
+</PageLayout>
