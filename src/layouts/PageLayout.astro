@@ -1,0 +1,25 @@
+---
+import Layout from "./Layout.astro";
+---
+
+<Layout>
+  <header class="flex justify-between items-center w-full h-16">
+    <div class="flex items-center gap-10">
+      <a href="/"> <h2 class="text-2xl font-bold">Examen CCSE</h2></a>
+    </div>
+    <div class="relative w-12">
+      <img
+        class="rounded-full ring-2 ring-gray-100 w-12 h-12"
+        src="https://static.wikia.nocookie.net/thelastofus/images/e/e4/Young_Ellie_shoulder_infobox.jpg"
+      />
+      <div
+        class="absolute bottom-0 right-0 h-3 w-3 rounded-full ring ring-white bg-green-600"
+      >
+      </div>
+    </div>
+  </header>
+  <main>
+    <slot />
+  </main>
+  <footer></footer>
+</Layout>

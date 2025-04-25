@@ -1,11 +1,41 @@
 ---
-import Welcome from "../components/Welcome.astro";
-import Layout from "../layouts/Layout.astro";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import PageLayout from "@/layouts/PageLayout.astro";
 ---
 
-<Layout>
-  <Welcome />
-</Layout>
+<PageLayout>
+  <div id="container">
+    <section>
+      <div class="grid grid-cols-2 gap-4">
+        <a href="/exam" class="font-bold text-2xl">
+          <div
+            class="p-20 rounded-lg overflow-hidden bg-white shadow-sm cursor-pointer active:shadow-lg"
+          >
+            Nuevo examen
+          </div>
+        </a>
+        <a href="/questions" class="font-bold text-2xl">
+          <div
+            class="p-20 rounded-lg overflow-hidden bg-white shadow-sm cursor-pointer active:shadow-lg"
+          >
+            Preguntas
+          </div>
+        </a>
+        <a href="/exam" class="font-bold text-2xl">
+          <div
+            class="p-20 rounded-lg overflow-hidden bg-white shadow-sm cursor-pointer active:shadow-lg"
+          >
+            Examenes realizados
+          </div>
+        </a>
+      </div>
+    </section>
+  </div>
+</PageLayout>
+
+<style>
+  #container {
+    font-family:
+      Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial,
+      sans-serif;
+  }
+</style>

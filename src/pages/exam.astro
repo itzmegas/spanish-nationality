@@ -1,0 +1,12 @@
+---
+import PageLayout from "@/layouts/PageLayout.astro";
+import questions from "@/data/ccse_questions.json";
+import type { Question as TypeQuestion } from "../types";
+import { Exam as ExamComponent } from "@/components";
+
+import { generateRandomExam } from "@/utils";
+---
+
+<PageLayout>
+  <ExamComponent client:only questionnaire={generateRandomExam()} />
+</PageLayout>

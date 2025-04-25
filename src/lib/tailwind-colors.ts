@@ -36,8 +36,26 @@ export const createColorClasses = (
   color: Colors,
   ...classConfigs: Array<Partial<Omit<ColorClassOptions, "color">>>
 ) => {
+  // If no configurations are provided, use default configurations
+  if (classConfigs.length === 0) {
+    classConfigs = [
+      { property: "bg", variant: 500 },
+      { property: "bg", variant: 600, state: "hover" },
+      { property: "bg", variant: 700, state: "active" },
+    ];
+  }
+
   return classConfigs
-    .map((config) => getColorClass({ ...(config as ColorClassOptions), color }))
+    .map((config) => {
+      // Make sure property is defined
+      const validConfig = {
+        property: config.property || "bg",
+        variant: config.variant,
+        state: config.state,
+        color,
+      };
+      return getColorClass(validConfig);
+    })
     .join(" ");
 };
 

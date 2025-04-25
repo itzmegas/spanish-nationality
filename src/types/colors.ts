@@ -1,4 +1,9 @@
 export type Colors =
+  | "primary"
+  | "secondary"
+  | "accent"
+  | "text"
+  | "background"
   | "red"
   | "orange"
   | "amber"
@@ -20,4 +25,5 @@ export type Colors =
   | "gray"
   | "zinc"
   | "neutral"
-  | "stone";
+  | "stone"
+  | "transparent";
