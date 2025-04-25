@@ -5,6 +5,5 @@ import { Exam, User } from "./tables";
 export default defineDb({
   tables: {
     User,
-    Exam,
   },
 });
