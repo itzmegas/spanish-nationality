@@ -1,8 +1,5 @@
 ---
 import PageLayout from "@/layouts/PageLayout.astro";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <PageLayout>
@@ -13,7 +10,7 @@ import PageLayout from "@/layouts/PageLayout.astro";
           <div
             class="p-20 rounded-lg overflow-hidden bg-white shadow-sm cursor-pointer active:shadow-lg"
           >
-            Examen
+            Nuevo examen
           </div>
         </a>
         <a href="/questions" class="font-bold text-2xl">
@@ -21,6 +18,13 @@ import PageLayout from "@/layouts/PageLayout.astro";
             class="p-20 rounded-lg overflow-hidden bg-white shadow-sm cursor-pointer active:shadow-lg"
           >
             Preguntas
+          </div>
+        </a>
+        <a href="/exam" class="font-bold text-2xl">
+          <div
+            class="p-20 rounded-lg overflow-hidden bg-white shadow-sm cursor-pointer active:shadow-lg"
+          >
+            Examenes realizados
           </div>
         </a>
       </div>

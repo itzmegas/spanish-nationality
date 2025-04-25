@@ -1,4 +1,3 @@
-import { useState } from "preact/hooks";
 import { Button } from "./ui/Button";
 import type { MouseEventHandler } from "preact/compat";
 import type { Question as TypeQuestion } from "../types";

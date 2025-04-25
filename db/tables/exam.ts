@@ -6,6 +6,8 @@ export const Exam = defineTable({
     id: column.text({ primaryKey: true }),
     name: column.text(),
     description: column.text(),
+    answers: column.json(),
+    number: column.number(),
     total_questions: column.number(),
     correct_answers: column.number(),
     wrong_answers: column.number(),
